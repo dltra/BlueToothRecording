@@ -51,8 +51,6 @@ public class BluetoothAudioRecorder extends AppCompatActivity {
         buttonStopRecording.setEnabled(false);
         buttonPlayLastRecordAudio.setEnabled(false);
         buttonStopPlayingRecording.setEnabled(false);
-        ActivityCompat.requestPermissions(BluetoothAudioRecorder.this, new
-                String[]{WRITE_EXTERNAL_STORAGE, RECORD_AUDIO}, RequestPermissionCode);
         buttonStartRecording.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -222,8 +220,6 @@ public class BluetoothAudioRecorder extends AppCompatActivity {
     }
 
     private void requestPermission() {
-        Toast.makeText(BluetoothAudioRecorder.this, "Requesting permissions",
-                Toast.LENGTH_LONG).show();
         ActivityCompat.requestPermissions(BluetoothAudioRecorder.this, new
                 String[]{WRITE_EXTERNAL_STORAGE, RECORD_AUDIO}, RequestPermissionCode);
     }
